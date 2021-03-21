@@ -16,6 +16,7 @@ import Button from '../widgets/buttons/button'
 import IconButton from '../widgets/buttons/iconButton'
 import BoardIcon from '../widgets/icons/board'
 import DeleteIcon from '../widgets/icons/delete'
+import EditIcon from '../widgets/icons/edit'
 import DisclosureTriangle from '../widgets/icons/disclosureTriangle'
 import DuplicateIcon from '../widgets/icons/duplicate'
 import HamburgerIcon from '../widgets/icons/hamburger'
@@ -256,6 +257,7 @@ class Sidebar extends React.Component<Props, State> {
                                             <IconButton icon={<OptionsIcon/>}/>
                                             <Menu position='left'>
                                                 <Menu.Text
+                                                    icon={<EditIcon/>}
                                                     id='edit'
                                                     name={intl.formatMessage({id: 'Sidebar.edit-template', defaultMessage: 'Edit'})}
                                                     onClick={() => {
@@ -324,6 +326,21 @@ class Sidebar extends React.Component<Props, State> {
                                 id='spanish-lang'
                                 name={intl.formatMessage({id: 'Sidebar.spanish', defaultMessage: 'Spanish'})}
                                 onClick={async () => this.props.setLanguage('es')}
+                            />
+                            <Menu.Text
+                                id='german-lang'
+                                name={intl.formatMessage({id: 'Sidebar.german', defaultMessage: 'German'})}
+                                onClick={async () => this.props.setLanguage('de')}
+                            />
+                            <Menu.Text
+                                id='japanese-lang'
+                                name={intl.formatMessage({id: 'Sidebar.japanese', defaultMessage: 'Japanese'})}
+                                onClick={async () => this.props.setLanguage('ja')}
+                            />
+                            <Menu.Text
+                                id='french-lang'
+                                name={intl.formatMessage({id: 'Sidebar.french', defaultMessage: 'French'})}
+                                onClick={async () => this.props.setLanguage('fr')}
                             />
                         </Menu.SubMenu>
                         <Menu.SubMenu
